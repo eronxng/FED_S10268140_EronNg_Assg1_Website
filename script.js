@@ -13,7 +13,7 @@ document.addEventListener("scroll", () => {
     texts.forEach((text, index) => {
         const elementTop = text.offsetTop;
 
-        // Reveal when the element comes into view
+
         if (scrollPosition + windowHeight > elementTop - 200) { 
             text.classList.add("visible");
         }
