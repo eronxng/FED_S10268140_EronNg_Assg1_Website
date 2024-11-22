@@ -1,54 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: #99bdd3;
-    padding: 1rem;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+    height: 100%;
 }
 
 .logo {
-    color: white;
-    font-size: 60px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    font-size: 1.2rem;
     font-weight: bold;
-    font-family: "Tangerine", cursive;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 10;
 }
 
-.content {
+.logo p {
+    margin: 0;
+}
+
+.homepage {
+    background: url('Blissoo Images/Flower/Flower_IMG_3.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    transition: filter 0.3s ease-in-out;
+    background-attachment: fixed;
+    z-index: 1;
+    overflow: hidden;
+}
+.homepage.blurred {
+    filter: blur(8px);
 }
 
-.image-container {
-    flex: 1;
+.homepage.hide-elements .logo,
+.homepage.hide-elements .scroll-pointer {
+    opacity: 0;
+    pointer-events: none;
 }
 
-.image-container img {
-    width: 450px;
+.text-bg {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+    font-style: italic;
+}
+
+.scroll-pointer {
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 1rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-pointer span {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.scroll-pointer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.text-section {
+    background: transparent;
     height: auto;
-    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+    padding: 40px;
 }
 
-.text-container {
-    flex: 1;
-    padding-top: 120px
+.large-text {
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
 }
 
+.large-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-.text-container p{
-    flex: 2;
-    padding: 15px;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
