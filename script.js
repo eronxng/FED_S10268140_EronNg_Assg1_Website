@@ -12,12 +12,27 @@ document.addEventListener("scroll", () => {
         const elementTop = text.getBoundingClientRect().top;
         const elementBottom = text.getBoundingClientRect().bottom;
 
+<<<<<<< HEAD
         if (elementTop < windowHeight && elementBottom > 0) {
+=======
+    if (scrollPosition > 50) {
+        homepage.classList.add("blurred");
+    } else {
+        homepage.classList.remove("blurred");
+    }
+
+    texts.forEach((text, index) => {
+        const elementTop = text.offsetTop;
+
+
+        if (scrollPosition + windowHeight > elementTop - 200) { 
+>>>>>>> 2cce423dc8bd840b7d0093c9f615001e4cb55d7f
             text.classList.add("visible");
         } else {
             text.classList.remove("visible"); 
         }
     });
+<<<<<<< HEAD
 
     if (scrollPosition > 50) {
         scrollPointer.style.opacity = "0";
@@ -40,3 +55,6 @@ document.addEventListener("scroll", () => {
     }
 
 });
+=======
+});
+>>>>>>> 2cce423dc8bd840b7d0093c9f615001e4cb55d7f
