@@ -23,6 +23,30 @@ body.Dior {
     background-attachment: fixed;
 }
 
+body.DiorGallery {
+    height: 100%;
+    background: url('Blissoo Images/Flower/Flower_IMG_4.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+body.Alo {
+    height: 100%;
+    background: url('Blissoo Images/Flower/Flower_IMG_5.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+body.AloGallery {
+    height: 100%;
+    background: url('Blissoo Images/Flower/Flower_IMG_6.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+body.awards {
+    height: 100%;
+    background: url('Blissoo Images/Flower/Flower_IMG_7.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
 .logo {
     text-decoration: none;
     position: fixed;
@@ -168,6 +192,19 @@ body.Dior {
     font-size: 1rem;
 }
 
+.footer-collab {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    font-size: 1rem;
+    bottom: 0;
+    position: absolute;
+}
+
 .footer-link {
     color: white;
     text-decoration: none;
@@ -207,8 +244,49 @@ body.Dior {
     top: 30px;
     bottom: 30px;
     margin: 0;
+    overflow-y: auto;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-y: auto;
+    color: white;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+table th {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    color: white;
+}
+
+table tbody {
+    display: block;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table thead {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 .wrapper {
     width: 100%;
     height: 100vh;
@@ -293,6 +371,25 @@ body.Dior {
     margin-bottom: 5px;
 }
 
+.button {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-right: 40px;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    width: calc(100%-40px);
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 input {
     display: none;
 }
@@ -321,55 +418,104 @@ input:checked + label .description {
 
 .DiorHeader {
     color: white;
-    padding-top: 250px;
+    padding-top: 200px;
     padding-bottom: 15px;
-    padding-left: 150px;
+    padding-left: 300px;
     font-size: 3rem;
 }
 
 .DiorContent {
     color: white;
-    padding-left: 150px;
-    padding-right: 900px;
+    padding-left: 300px;
+    padding-right: 800px;
     font-size: 1.25rem;
     line-height: 1.5;
 }
 
-.slider-container {
-    position: fixed;
-    right: 200px;
-    top: 0;
-    height: 100vh;
-    width: 250px;
-    overflow: hidden;
-  }
-  
-  .slider {
-    position: relative;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .slides {
-    display: flex;
-    flex-direction: column;
-    transition: transform 1s ease-in-out;
-  }
+.GalleryButton {
+    margin-top: 40px;
+    margin-left: 300px;
+    background-color: rgba(255, 255, 255, 0.5);;
+    border-radius: 20px;
+    font-size: 16px;
+    border: transparent;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .slide {
-    flex-shrink: 0;
+.GalleryButton:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.AloHeader {
+    color: white;
+    padding-top: 200px;
+    padding-bottom: 15px;
+    padding-left: 300px;
+    font-size: 3rem;
+}
+
+.AloContent {
+    color: white;
+    padding-left: 300px;
+    padding-right: 800px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.back {
+    position: absolute;
+    left: 50px;
+    bottom: 700px;
+    background-color: rgba(255, 255, 255, 0.5);;
+    border-radius: 20px;
+    font-size: 16px;
+    border: transparent;
+    padding: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.back:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.DiorGalHeader {
+    color: white;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.AloGalHeader {
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+    
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.gallery img {
     width: 100%;
-    height: 100%;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-  }
-  
-  
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.gallery img:hover {
+    transform: scale(1.05);
+}
 
 
 
@@ -383,4 +529,16 @@ input:checked + label .description {
     60% {
         transform: translateY(-5px);
     }
+}
+
+@media screen and (max-width: 500px) {
+    /* Add your responsive styles here */
+    .container {
+        flex-direction: column;
+
+    }
+    .card {
+        width: 80% !important;
+    }
+
 }
