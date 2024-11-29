@@ -544,14 +544,131 @@ input:checked + label .description {
     }
 }
 
-@media screen and (max-width: 500px) {
-    /* Add your responsive styles here */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .logo, .nav {
+        position: static;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .nav {
+        word-spacing: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        margin: 5px 10px;
+    }
+
+    .homepage {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .text-section {
+        margin: 50px 20px;
+        padding: 20px;
+    }
+
+    .large-text {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .DiorHeader, .AloHeader {
+        font-size: 2rem;
+        padding: 100px 20px 15px;
+        text-align: center;
+    }
+
+    .DiorContent, .AloContent {
+        font-size: 1rem;
+        padding: 0 20px;
+        line-height: 1.4;
+    }
+
+    .GalleryButton {
+        margin: 20px auto;
+        display: block;
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+
+    .wrapper {
+        height: auto;
+    }
+
     .container {
         flex-direction: column;
-
+        height: auto;
     }
+
     .card {
-        width: 80% !important;
+        width: 100% !important;
+        margin: 10px 0;
+        height: 300px;
     }
 
+    .card > .row > .icon {
+        height: 40px;
+        width: 40px;
+        margin: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .DiorGalHeader, .AloGalHeader {
+        position: relative;
+        top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .morphism {
+        width: calc(100% - 20px);
+        height: auto;
+        left: 10px;
+        right: 10px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .back {
+        position: relative;
+        left: 10px;
+        bottom: 0;
+        width: 100%;
+        max-width: 200px;
+        height: 50px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 25px;
+        padding: 0;
+        box-sizing: border-box; 
+    }
 }
