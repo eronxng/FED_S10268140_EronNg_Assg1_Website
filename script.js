@@ -8,12 +8,14 @@ document.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
 
+    // Blur homepage when scrolled
     if (scrollPosition > 50) {
         homepage.classList.add("blurred");
     } else {
         homepage.classList.remove("blurred");
     }
 
+    // Hide or show scroll pointer, text background, title, and subtitle
     if (scrollPosition > 50) {
         scrollPointer.style.opacity = "0";
         scrollPointer.style.pointerEvents = "none";
@@ -34,7 +36,7 @@ document.addEventListener("scroll", () => {
         subtitle.style.opacity = "1";
     }
 
-
+    // Add 'visible' class to texts when in viewport
     texts.forEach((text) => {
         const elementTop = text.getBoundingClientRect().top;
         const elementBottom = text.getBoundingClientRect().bottom;
@@ -46,4 +48,3 @@ document.addEventListener("scroll", () => {
         }
     });
 });
-

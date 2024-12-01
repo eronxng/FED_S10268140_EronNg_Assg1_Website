@@ -1,20 +1,24 @@
+/* Reset default browser styles and set consistent box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;  /* Removes default margin */
+    padding: 0;  /* Removes default padding */
+    box-sizing: border-box;  /* Ensures padding and borders are included in element's total width/height */
 }
 
+/* Base styles for the entire site */
+body {
+    height: 100%;  /* Full height of the viewport */
+    overflow: auto;  /* Allows scrolling if the content overflows */
+}
+
+/* Different background images for specific pages */
 body.hpage {
-    height: 100%;
     background: url('Blissoo Images/Flower/Flower_IMG_3.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    background-attachment: fixed;  /* Keeps the background fixed while scrolling */
 }
 
 body.collaborations {
-    height: 100%;
     background: url('Blissoo Images/Flower/Flower_IMG_1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    overflow: hidden;
 }
 
 body.Dior {
@@ -47,68 +51,72 @@ body.awards {
     background-attachment: fixed;
 }
 
+/* Logo styling for the top-left corner */
 .logo {
-    text-decoration: none;
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 1px;
-    z-index: 10;
+    text-decoration: none;  /* Removes underline */
+    position: fixed;  /* Keeps the logo fixed in the top-left corner */
+    top: 50px;  /* 50px from the top */
+    left: 50px;  /* 50px from the left */
+    font-size: 1.2rem;  /* Font size */
+    font-weight: bold;  /* Bold text */
+    text-transform: uppercase;  /* Uppercase text */
+    color: white;  /* White text */
+    letter-spacing: 1px;  /* Spacing between letters */
+    z-index: 10;  /* Ensures the logo is above other elements */
 }
 
 .logo a {
-    color: white;
-    text-decoration: none;
-    margin: 0;
+    color: white;  /* White text color for links */
+    text-decoration: none;  /* Removes underline from links */
+    margin: 0;  /* Removes margin */
 }
 
 .logo a:hover {
-    text-decoration: underline;
+    text-decoration: underline;  /* Underline links when hovered */
 }
 
+/* Navigation bar styling for the top-right corner */
 .nav {
-    text-decoration: none;
-    position: fixed;
-    top: 50px;
-    left: 1300px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 1px;
-    z-index: 10;
-    word-spacing: 20px;
+    text-decoration: none;  /* Removes underline */
+    position: fixed;  /* Keeps the nav fixed */
+    top: 50px;  /* 50px from the top */
+    left: 1300px;  /* Positioned far on the right */
+    font-size: 1.2rem;  /* Font size */
+    font-weight: bold;  /* Bold text */
+    text-transform: uppercase;  /* Uppercase text */
+    color: white;  /* White text */
+    letter-spacing: 1px;  /* Spacing between letters */
+    z-index: 10;  /* Ensures the nav is above other elements */
+    word-spacing: 20px;  /* Spacing between words */
 }
 
 .nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0;
+    color: white;  /* White text color for links */
+    text-decoration: none;  /* Removes underline from links */
+    margin: 0;  /* Removes margin */
 }
 
 .nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline;  /* Underline links when hovered */
 }
 
+/* Main homepage container with centered content */
 .homepage {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: filter 0.3s ease-in-out;
-    background-attachment: fixed;
-    z-index: 1;
-    overflow: hidden;
+    height: 100vh;  /* Full viewport height */
+    width: 100%;  /* Full width */
+    display: flex;  /* Flexbox for alignment */
+    flex-direction: column;  /* Stack children vertically */
+    justify-content: center;  /* Vertically center content */
+    align-items: center;  /* Horizontally center content */
+    text-align: center;  /* Center text */
+    transition: filter 0.3s ease-in-out;  /* Smooth transition for filter changes */
+    background-attachment: fixed;  /* Keeps the background fixed */
+    z-index: 1;  /* Ensures the homepage is above other content */
+    overflow: hidden;  /* Hides overflow */
 }
+
 .homepage.blurred {
-    filter: blur(8px);
+    filter: blur(8px);  /* Applies a blur effect when the class 'blurred' is added */
 }
 
 .homepage.hide-elements .logo,
@@ -116,559 +124,652 @@ body.awards {
 .homepage.hide-elements .text-bg,
 .homepage.hide-elements .title,
 .homepage.hide-elements .subtitle {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0;  /* Hides elements */
+    pointer-events: none;  /* Disables interaction */
 }
 
+/* Background for text with opacity */
 .text-bg {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    width: 100%;
-    border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+    padding: 20px;  /* Padding around text */
+    width: 100%;  /* Full width */
+    border-radius: 10px;  /* Rounded corners */
+    transition: opacity 0.5s ease-in-out;  /* Smooth fade effect */
 }
 
+/* Title and subtitle styling */
 .title {
-    font-size: 4rem;
-    color: white;
-    margin: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: opacity 0.5s ease-in-out;
+    font-size: 4rem;  /* Large font size */
+    color: white;  /* White text */
+    margin: 0;  /* Removes margin */
+    font-weight: bold;  /* Bold text */
+    text-transform: uppercase;  /* Uppercase text */
+    transition: opacity 0.5s ease-in-out;  /* Smooth fade effect */
 }
 
 .subtitle {
-    color: white;
-    font-size: 1.5rem;
-    margin: 10px 0 20px;
-    font-style: italic;
-    transition: opacity 0.5s ease-in-out;
+    color: white;  /* White text */
+    font-size: 1.5rem;  /* Smaller font size */
+    margin: 10px 0 20px;  /* Margins for spacing */
+    font-style: italic;  /* Italic text */
+    transition: opacity 0.5s ease-in-out;  /* Smooth fade effect */
 }
 
+/* Scroll pointer animation at the bottom */
 .scroll-pointer {
-    color: white;
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-    font-size: 1rem;
-    animation: bounce 2s infinite;
-    cursor: pointer;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    color: white;  /* White text */
+    position: absolute;  /* Positioned at the bottom */
+    bottom: 20px;  /* 20px from the bottom */
+    text-align: center;  /* Center text */
+    font-size: 1rem;  /* Font size */
+    animation: bounce 2s infinite;  /* Bouncing animation */
+    cursor: pointer;  /* Pointer cursor on hover */
+    opacity: 1;  /* Fully visible */
+    transition: opacity 0.5s ease-in-out;  /* Smooth fade effect */
 }
 
 .scroll-pointer span {
-    font-size: 2rem;
-    margin-bottom: 5px;
+    font-size: 2rem;  /* Larger font size */
+    margin-bottom: 5px;  /* Small margin at the bottom */
 }
 
 .scroll-pointer p {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+    margin: 0;  /* Removes margin */
+    font-size: 1rem;  /* Font size */
+    font-weight: 300;  /* Light font weight */
+    letter-spacing: 1px;  /* Spacing between letters */
 }
 
+/* Section for text paragraphs */   
 .text-section {
-    background: transparent;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    z-index: 20;
-    overflow: hidden;
-    padding: 40px;
-    bottom: 50px;
-    margin: 200px;
+    background: transparent;  /* Transparent background */
+    height: auto;  /* Auto height */
+    display: flex;  /* Flexbox layout */
+    justify-content: center;  /* Center content */
+    align-items: center;  /* Center content vertically */
+    flex-direction: column;  /* Stack content vertically */
+    overflow: hidden;  /* Hide overflow */
+    position: relative;  /* Relative positioning */
+    z-index: 20;  /* Stacks above other content */
+    padding: 40px;  /* Padding around the section */
+    bottom: 50px;  /* Positions 50px from the bottom */
+    margin: 200px;  /* Adds margin around the section */
 }
 
+/* Large text paragraphs with fade-in effect */
 .large-text {
-    color: white;
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-    word-spacing: 5px;
-    background:rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    color: white;  /* White text */
+    position: relative;  /* Positioned relative */
+    font-size: 1.5rem;  /* Font size */
+    font-weight: bold;  /* Bold text */
+    opacity: 0;  /* Initially invisible */
+    transform: translateY(50px);  /* Initially positioned below */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;  /* Smooth fade and slide-in effect */
+    word-spacing: 5px;  /* Spacing between words */
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 15px;  /* Padding around the text */
 }
 
 .large-text.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1;  /* Fully visible */
+    transform: translateY(0);  /* Moves to the original position */
 }
 
 .large-text.hover {
-    text-decoration: underline;
+    text-decoration: underline;  /* Underlines text on hover */
 }
 
+/* Footer styling */
 .footer {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    z-index: 10;
-    font-size: 1rem;
+    width: 100%;  /* Full width */
+    background: rgba(0, 0, 0, 0.8);  /* Semi-transparent black background */
+    color: white;  /* White text */
+    text-align: center;  /* Centered text */
+    padding: 20px;  /* Padding around footer */
+    position: relative;  /* Relative positioning */
+    z-index: 10;  /* Ensure it's above other content */
+    font-size: 1rem;  /* Font size */
 }
 
 .footer-link {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1rem;
-    transition: color 0.3s ease-in-out;
+    color: white;  /* White text color */
+    text-decoration: none;  /* No underline */
+    margin: 0 10px;  /* Horizontal margin between links */
+    font-size: 1rem;  /* Font size */
+    transition: color 0.3s ease-in-out;  /* Smooth transition on hover */
 }
 
+/* Hover effect for footer links */
 .footer-link:hover {
-    color: #be3535;
+    color: #be3535;  /* Change color on hover */
 }
 
+/* Footer copyright text */
 .footer-copyright {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    opacity: 0.8;
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    margin-top: 10px;  /* Margin at the top */
+    opacity: 0.8;  /* Slightly transparent */
 }
 
+/* Footer styles */
+.footer {
+    width: 100%;  /* Full width */
+    background: rgba(0, 0, 0, 0.8);  /* Semi-transparent black background */
+    color: white;  /* White text */
+    text-align: center;  /* Centered text */
+    padding: 20px;  /* Padding around footer */
+    position: relative;  /* Relative positioning */
+    z-index: 10;  /* Ensure it's above other content */
+    font-size: 1rem;  /* Font size */
+}
+
+/* Footer link styles */
+.footer-link {
+    color: white;  /* White text color */
+    text-decoration: none;  /* No underline */
+    margin: 0 10px;  /* Horizontal margin between links */
+    font-size: 1rem;  /* Font size */
+    transition: color 0.3s ease-in-out;  /* Smooth transition on hover */
+}
+
+/* Hover effect for footer links */
+.footer-link:hover {
+    color: #be3535;  /* Change color on hover */
+}
+
+/* Footer copyright text */
+.footer-copyright {
+    font-size: 0.9rem;  /* Slightly smaller font size */
+    margin-top: 10px;  /* Margin at the top */
+    opacity: 0.8;  /* Slightly transparent */
+}
+
+/* Morphism effect for background */
 .morphism {
-    flex: 1;
-    width: calc(100vw - 60px);
-    height: calc(100vh - 60px);
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-    left: 30px;
-    right: 30px;
-    top: 30px;
-    bottom: 30px;
-    margin: 0;
-    overflow-y: auto;
+    flex: 1;  /* Flexbox behavior */
+    width: calc(100vw - 60px);  /* Full width minus padding */
+    height: calc(100vh - 60px);  /* Full height minus padding */
+    background: rgba(255, 255, 255, 0.2);  /* Semi-transparent white background */
+    border-radius: 20px;  /* Rounded corners */
+    backdrop-filter: blur(10px);  /* Apply blur effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Shadow effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* Light border */
+    overflow: hidden;  /* Hide overflow */
+    display: flex;  /* Flexbox layout */
+    flex-direction: column;  /* Column direction */
+    justify-content: center;  /* Center content vertically */
+    align-items: center;  /* Center content horizontally */
+    text-align: center;  /* Center text */
+    position: relative;  /* Relative positioning */
+    padding: 20px;  /* Padding inside the element */
+    left: 30px;  /* Left margin */
+    right: 30px;  /* Right margin */
+    top: 30px;  /* Top margin */
+    bottom: 30px;  /* Bottom margin */
+    margin: 0;  /* Remove any margin */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
+/* Table styles */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    overflow-y: auto;
-    color: white;
+    width: 100%;  /* Full width */
+    border-collapse: collapse;  /* Collapse table borders */
+    margin-top: 20px;  /* Space above the table */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    color: white;  /* White text */
 }
 
+
+/* Table header and cell styles */
 table th, table td {
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;  /* Padding inside cells */
+    border: 1px solid rgba(255, 255, 255, 0.4);  /* Light border */
 }
 
+/* Table header background */
 table th {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);  /* Semi-transparent black background */
 }
 
+
+/* Table data cell background */
 table td {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);  /* Semi-transparent white background */
 }
 
+/* Heading style for tables */
 h2 {
-    color: white;
+    color: white;  /* White text */
 }
 
+/* Table body scroll styling */
 table tbody {
-    display: block;
-    max-height: 400px;
-    overflow-y: auto;
+    display: block;  /* Block display for scrollable body */
+    max-height: 400px;  /* Maximum height for scrolling */
+    overflow-y: auto;  /* Enable vertical scrolling */
 }
 
+/* Table header and body row display */
 table thead, table tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+    display: table;  /* Table display */
+    width: 100%;  /* Full width */
+    table-layout: fixed;  /* Fixed table layout */
 }
 
+/* Table header styling */
 table thead {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);  /* Semi-transparent black background */
 }
+
+/* Wrapper for centering content */
 .wrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;  /* Full width */
+    height: 100vh;  /* Full viewport height */
+    display: flex;  /* Flexbox layout */
+    align-items: center;  /* Vertically center content */
+    justify-content: center;  /* Horizontally center content */
 }
 
+/* Container for flex layout */
 .container {
-    height: 600px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: start;
+    height: 600px;  /* Fixed height */
+    display: flex;  /* Flexbox layout */
+    flex-wrap: nowrap;  /* Do not wrap items */
+    justify-content: start;  /* Align to the start */
 }
 
+.card-inner {
+    display: block; /* Keeps the layout structure intact */
+    overflow: hidden; /* Ensures smooth animation */
+}
+
+/* Card styling */
 .card {
-    width: 80px;
-    border-radius: .75rem;
-    background-size: cover;
-    cursor: pointer;
-    overflow: hidden;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
-    transition: .6s cubic-bezier(.28,-0.03,0,.99);
-    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-    position: relative;
-    z-index: 1;
+    width: 80px;  /* Fixed width */
+    border-radius: .75rem;  /* Rounded corners */
+    background-size: cover;  /* Cover background image */
+    cursor: pointer;  /* Pointer cursor on hover */
+    overflow: hidden;  /* Hide overflow */
+    margin: 0 10px;  /* Horizontal margin */
+    display: flex;  /* Flexbox layout */
+    align-items: flex-end;  /* Align content to the bottom */
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);  /* Smooth transition */
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);  /* Shadow effect */
+    position: relative;  /* Relative positioning */
+    z-index: 1;  /* Layer above other content */
 }
 
+/* Row inside the card */
 .card > .row {
-    color: white;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 100%;
+    color: white;  /* White text */
+    display: flex;  /* Flexbox layout */
+    flex-wrap: nowrap;  /* No wrapping */
+    width: 100%;  /* Full width */
+    height: 100%;  /* Full height */
 }
 
+/* Icon inside card */
 .card > .row > .icon {
-    background: #223;
-    color: white;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    flex-shrink: 0; 
+    background: #223;  /* Dark background */
+    color: white;  /* White icon color */
+    border-radius: 50%;  /* Circular icon */
+    height: 50px;  /* Icon size */
+    width: 50px;  /* Icon size */
+    display: flex;  /* Flexbox layout */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+    margin: 15px;  /* Margin around the icon */
+    flex-shrink: 0;  /* Prevent shrinking */
 }
 
+/* Description inside the card */
 .card > .row > .description {
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    height: auto;
-    width: calc(100% - 30px);
-    opacity: 0;
-    transform: translateY(30px);
-    transition-delay: .3s;
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-    word-wrap: break-word;
-    padding: 10px;
-    box-sizing: border-box;
+    font-size: small;  /* Small font size */
+    display: flex;  /* Flexbox layout */
+    justify-content: center;  /* Center content horizontally */
+    flex-direction: column;  /* Column direction */
+    overflow: hidden;  /* Hide overflow */
+    height: auto;  /* Auto height */
+    width: calc(100% - 30px);  /* Full width minus padding */
+    opacity: 0;  /* Initially hidden */
+    transform: translateY(30px);  /* Position description below */
+    transition-delay: .3s;  /* Delay before transition */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;  /* Smooth transition */
+    word-wrap: break-word;  /* Allow text wrapping */
+    padding: 10px;  /* Padding inside the description */
+    box-sizing: border-box;  /* Include padding in width calculation */
 }
 
+/* Paragraph inside description */
 .description p {
-    color: white;
-    padding-top: 5px;
-    line-height: 1.5;
-    margin: 0;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    width: calc(100% - 40px);
+    color: white;  /* White text */
+    padding-top: 5px;  /* Padding at the top */
+    line-height: 1.5;  /* Line spacing */
+    margin: 0;  /* No margin */
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent black background */
+    padding: 20px;  /* Padding inside the paragraph */
+    border-radius: 10px;  /* Rounded corners */
+    width: calc(100% - 40px);  /* Full width minus padding */
 }
 
+/* Heading inside description */
 .description h4 {
-    text-transform: uppercase;
-    margin-bottom: 5px;
+    text-transform: uppercase;  /* Uppercase text */
+    margin-bottom: 5px;  /* Margin below heading */
 }
 
+/* Button styling */
 .button {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    margin-right: 40px;
-    padding: 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    width: calc(100%-40px);
-    margin-top: 10px;
-    text-align: center;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    display: inline-block;  /* Inline block */
+    background-color: rgba(0, 0, 0, 0.5);  /* Dark background */
+    color: white;  /* White text */
+    margin-right: 40px;  /* Right margin */
+    padding: 20px;  /* Padding inside button */
+    text-decoration: none;  /* No underline */
+    border-radius: 10px;  /* Rounded corners */
+    width: calc(100% - 40px);  /* Full width minus margin */
+    margin-top: 10px;  /* Top margin */
+    text-align: center;  /* Center text */
+    font-size: 16px;  /* Font size */
+    transition: background-color 0.3s ease;  /* Smooth transition on hover */
 }
 
+/* Hover effect for button */
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #be3535;  /* Change background on hover */
 }
 
+/* Hide the input elements */
 input {
-    display: none;
+    display: none;  /* Hide the input field */
 }
 
+/* When the input is checked, adjust the label width */
 input:checked + label {
-    width: 600px;
+    width: 600px;  /* Set the label width when input is checked */
 }
 
+/* When input is checked, make the description visible and animate it */
 input:checked + label .description {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+    opacity: 1 !important;  /* Make description fully visible */
+    transform: translateY(0) !important;  /* Reset vertical position */
 }
 
+/* Specific background images for each card based on the 'for' attribute */
 .card[for="c1"] {
-    background-image: url("Blissoo Images/Dior/Dior_IMG_2.jpg");
+    background-image: url("Blissoo Images/Dior/Dior_IMG_2.jpg");  /* Background for card 1 */
 }
 .card[for="c2"] {
-    background-image: url("Blissoo Images/Cartier/Cartier_IMG_6.jpg");
+    background-image: url("Blissoo Images/Cartier/Cartier_IMG_6.jpg");  /* Background for card 2 */
 }
 .card[for="c3"] {
-    background-image: url("Blissoo Images/Alo/Alo_IMG_4.jpg");
+    background-image: url("Blissoo Images/Alo/Alo_IMG_4.jpg");  /* Background for card 3 */
 }
 .card[for="c4"] {
-    background-image: url("Blissoo Images/Tommy/Tommy_IMG_3.jpg");
+    background-image: url("Blissoo Images/Tommy/Tommy_IMG_3.jpg");  /* Background for card 4 */
 }
 
+/* Dior header styling */
 .DiorHeader {
-    color: white;
-    padding-top: 200px;
-    padding-bottom: 15px;
-    padding-left: 300px;
-    font-size: 3rem;
+    color: white;  /* White text */
+    padding-top: 200px;  /* Space from the top */
+    padding-bottom: 15px;  /* Padding at the bottom */
+    padding-left: 300px;  /* Left padding */
+    font-size: 3rem;  /* Font size */
 }
 
+/* Dior content styling */
 .DiorContent {
-    color: white;
-    padding-left: 300px;
-    padding-right: 800px;
-    font-size: 1.25rem;
-    line-height: 1.5;
+    color: white;  /* White text */
+    padding-left: 300px;  /* Left padding */
+    padding-right: 800px;  /* Right padding */
+    font-size: 1.25rem;  /* Font size */
+    line-height: 1.5;  /* Line spacing */
 }
 
+/* Styling for the Gallery button */
 .GalleryButton {
-    margin-top: 40px;
-    margin-left: 300px;
-    background-color: rgba(255, 255, 255, 0.5);;
-    border-radius: 20px;
-    font-size: 16px;
-    border: transparent;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 40px;  /* Space above */
+    margin-left: 300px;  /* Left margin */
+    background-color: rgba(255, 255, 255, 0.5);  /* Light transparent background */
+    border-radius: 20px;  /* Rounded corners */
+    font-size: 16px;  /* Font size */
+    border: transparent;  /* No border */
+    padding: 20px;  /* Padding inside button */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Font family */
 }
 
+/* Hover effect for the Gallery button */
 .GalleryButton:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);  /* Darker background on hover */
 }
 
+/* Alo header styling */
 .AloHeader {
-    color: white;
-    padding-top: 200px;
-    padding-bottom: 15px;
-    padding-left: 300px;
-    font-size: 3rem;
+    color: white;  /* White text */
+    padding-top: 200px;  /* Space from the top */
+    padding-bottom: 15px;  /* Padding at the bottom */
+    padding-left: 300px;  /* Left padding */
+    font-size: 3rem;  /* Font size */
 }
 
+/* Alo content styling */
 .AloContent {
-    color: white;
-    padding-left: 300px;
-    padding-right: 800px;
-    font-size: 1.25rem;
-    line-height: 1.5;
+    color: white;  /* White text */
+    padding-left: 300px;  /* Left padding */
+    padding-right: 800px;  /* Right padding */
+    font-size: 1.25rem;  /* Font size */
+    line-height: 1.5;  /* Line spacing */
 }
 
+/* Back button styling */
 .back {
-    position: absolute;
-    left: 50px;
-    bottom: 700px;
-    background-color: rgba(255, 255, 255, 0.5);;
-    border-radius: 20px;
-    font-size: 16px;
-    border: transparent;
-    padding: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;  /* Position the button absolutely */
+    left: 50px;  /* Set the distance from the left edge of the container */
+    bottom: 700px;  /* Set the distance from the bottom of the container */
+    background-color: rgba(255, 255, 255, 0.5);  /* Light transparent background */
+    border-radius: 20px;  /* Rounded corners for the button */
+    font-size: 16px;  /* Font size for the text inside the button */
+    border: transparent;  /* No border around the button */
+    padding: 16px;  /* Padding inside the button */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Font family for the button text */
 }
 
+/* Hover effect for the back button */
 .back:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);  /* Darker background on hover */
 }
 
+/* Dior gallery header styling */
 .DiorGalHeader {
-    color: white;
-    position: absolute;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    color: white;  /* White text */
+    margin-top: 5rem;  /* Space from the top */
+    text-align: center;  /* Center text */
 }
 
+/* Alo gallery header styling */
 .AloGalHeader {
-    color: white;
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    color: white;  /* White text */
+    margin-top: 5rem;  /* Space from the top */
+    text-align: center;  /* Center text */
 }
-
-    
+   
+/* Gallery grid container styling */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 10px;
+    display: grid;  /* Grid display */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  /* Responsive columns */
+    gap: 20px;  /* Space between items */
+    padding: 10px;  /* Padding inside gallery */
 }
 
+/* Styling for images inside the gallery */
 .gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;  /* Full width */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: cover;  /* Cover the container */
+    border-radius: 5px;  /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow effect */
 }
 
+/* Hover effect for images in the gallery */
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);  /* Slight zoom effect on hover */
 }
 
 
-
+/* Bouncing animation for elements */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
+        transform: translateY(0);  /* Default position */
     }
     40% {
-        transform: translateY(-10px);
+        transform: translateY(-10px);  /* Move up */
     }
     60% {
-        transform: translateY(-5px);
+        transform: translateY(-5px);  /* Move up slightly */
     }
 }
 
+
+/* Media query for screen sizes 768px or smaller */
 @media screen and (max-width: 768px) {
     body {
-        font-size: 14px;
+        font-size: 14px;  /* Smaller font size */
     }
 
+    /* Responsive navigation bar styling */
     .logo, .nav {
-        position: static;
-        text-align: center;
-        width: 100%;
-        left: 0;
-        top: 20px;
-        margin-bottom: 20px;
+        position: static;  /* Static position */
+        text-align: center;  /* Center text */
+        width: 100%;  /* Full width */
+        left: 0;  /* Align left */
+        top: 20px;  /* Space from the top */
+        margin-bottom: 20px;  /* Margin below */
     }
 
     .nav {
-        word-spacing: 10px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        word-spacing: 10px;  /* Space between navigation items */
+        position: relative;  /* Relative positioning */
+        display: flex;  /* Flexbox layout */
+        justify-content: center;  /* Center items */
+        flex-wrap: wrap;  /* Wrap items */
     }
 
     .nav a {
-        margin: 5px 10px;
+        margin: 5px 10px;  /* Horizontal margin */
     }
 
     .homepage {
-        padding: 20px;
+        padding: 20px;  /* Padding around homepage content */
     }
 
     .title {
-        font-size: 2.5rem;
+        font-size: 2.5rem;  /* Smaller title font */
     }
 
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.2rem;  /* Smaller subtitle font */
     }
 
     .text-section {
-        margin: 50px 20px;
-        padding: 20px;
+        margin: 50px 20px;  /* Margin around text sections */
+        padding: 20px;  /* Padding inside text sections */
     }
 
     .large-text {
-        font-size: 1.2rem;
-        padding: 10px;
+        font-size: 1.2rem;  /* Larger font size */
+        padding: 10px;  /* Padding inside text */
     }
 
+    /* Smaller font and padding for Dior and Alo headers */
     .DiorHeader, .AloHeader {
-        font-size: 2rem;
-        padding: 100px 20px 15px;
-        text-align: center;
+        font-size: 2rem;  /* Smaller font size */
+        padding: 100px 20px 15px;  /* Adjusted padding */
+        text-align: center;  /* Centered text */
     }
 
+    /* Adjust font size and padding for content */
     .DiorContent, .AloContent {
-        font-size: 1rem;
-        padding: 0 20px;
-        line-height: 1.4;
+        font-size: 1rem;  /* Smaller font size */
+        padding: 0 20px;  /* Adjusted padding */
+        line-height: 1.4;  /* Adjusted line height */
     }
 
+    /* Responsive gallery button */
     .GalleryButton {
-        margin: 20px auto;
-        display: block;
-        width: calc(100% - 40px);
-        text-align: center;
+        margin: 20px auto;  /* Center the button */
+        display: block;  /* Block display */
+        width: calc(100% - 40px);  /* Full width minus padding */
+        text-align: center;  /* Center text */
     }
 
+    /* Adjust wrapper height for small screens */
     .wrapper {
-        height: auto;
+        height: auto;  /* Auto height */
     }
 
+    /* Stack container vertically on small screens */
     .container {
-        flex-direction: column;
-        height: auto;
+        flex-direction: column;  /* Stack items vertically */
+        height: auto;  /* Auto height */
     }
 
+    /* Adjust card size for smaller screens */
     .card {
-        width: 100% !important;
-        margin: 10px 0;
-        height: 300px;
+        width: 100% !important;  /* Full width */
+        margin: 10px 0;  /* Vertical margin */
+        height: 300px;  /* Fixed height */
     }
 
+    /* Resize icons inside cards */
     .card > .row > .icon {
-        height: 40px;
-        width: 40px;
-        margin: 10px;
+        height: 40px;  /* Smaller icon size */
+        width: 40px;  /* Smaller icon size */
+        margin: 10px;  /* Margin around the icon */
     }
 
+    /* Adjust gallery grid for smaller screens */
     .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);  /* Two columns */
+        gap: 10px;  /* Smaller gap */
     }
 
+    /* Adjust headers for smaller screens */
     .DiorGalHeader, .AloGalHeader {
-        position: relative;
-        top: 20px;
-        margin-bottom: 40px;
+        position: relative;  /* Relative positioning */
+        top: 20px;  /* Space from the top */
+        margin-bottom: 40px;  /* Space below */
     }
 
+    /* Responsive morphism effect */
     .morphism {
-        width: calc(100% - 20px);
-        height: auto;
-        left: 10px;
-        right: 10px;
-        padding: 10px;
+        width: calc(100% - 20px);  /* Full width minus padding */
+        height: auto;  /* Auto height */
+        left: 10px;  /* Left position */
+        right: 10px;  /* Right position */
+        padding: 10px;  /* Padding inside */
     }
 
+    /* Smaller table font size */
     table {
-        font-size: 12px;
+        font-size: 12px;  /* Smaller font size */
     }
 
+    /* Adjust back button for small screens */
     .back {
-        position: relative;
-        left: 10px;
-        bottom: 0;
-        width: 100%;
-        max-width: 200px;
-        height: 50px;
-        margin: 20px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border-radius: 25px;
-        padding: 0;
-        box-sizing: border-box; 
+        position: relative;  /* Relative positioning */
+        left: 10px;  /* Left position */
+        bottom: 0;  /* Bottom position */
+        width: 100%;  /* Full width */
+        max-width: 200px;  /* Maximum width */
+        height: 50px;  /* Fixed height */
+        margin: 20px auto;  /* Center and margin */
+        display: flex;  /* Flexbox layout */
+        align-items: center;  /* Center content vertically */
+        justify-content: center;  /* Center content horizontally */
+        text-align: center;  /* Center text */
+        border-radius: 25px;  /* Rounded corners */
+        padding: 2rem;  /* Padding inside */
+        box-sizing: border-box;  /* Include padding in width/height calculation */
     }
 }
